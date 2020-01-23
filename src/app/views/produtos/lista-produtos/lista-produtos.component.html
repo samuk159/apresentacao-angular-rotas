@@ -1,3 +1,21 @@
-<p>
-  lista-produtos works!
-</p>
+<div *ngFor="let produto of produtos; let i = index"
+  class="row py-2 mx-0 border" [class.bg-light]="i % 2 == 0">
+  <div class="col-1">
+    <span class="font-weight-bold">ID:</span> {{produto.id}}
+  </div>
+  <div class="col-8">
+    <span class="font-weight-bold">Nome:</span> {{produto.nome}}
+  </div>
+  <div class="col-2">
+    <span class="font-weight-bold">Preço:</span> R$ {{produto.preco}}
+  </div>
+  <div class="col-1">
+    <div class="row justify-content-around">
+      <button [routerLink]="['detalhes/' + produto.id]" 
+        class="btn btn-primary btn-sm mr-md-1 table-button btn-40">
+        <span class="fa fa-edit"></span>
+        <span>Abrir</span>
+      </button>
+    </div>
+  </div>
+</div>

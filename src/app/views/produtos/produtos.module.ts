@@ -5,6 +5,7 @@ import { ListaProdutosComponent } from './lista-produtos/lista-produtos.componen
 import { NovoProdutoComponent } from './novo-produto/novo-produto.component';
 import { DetalhesProdutoComponent } from './detalhes-produto/detalhes-produto.component';
 import { ProdutoNaoEncontradoComponent } from './produto-nao-encontrado/produto-nao-encontrado.component';
+import { ProdutoService } from '../../services/produto/produto.service';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,9 @@ import { ProdutoNaoEncontradoComponent } from './produto-nao-encontrado/produto-
   imports: [
     CommonModule,
     ProdutosRoutingModule
+  ],
+  providers: [
+    ProdutoService
   ]
 })
 export class ProdutosModule { }
