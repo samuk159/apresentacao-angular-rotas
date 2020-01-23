@@ -1,6 +1,6 @@
 import { ProdutoService } from './../../../services/produto/produto.service';
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-detalhes-produto',
@@ -13,7 +13,8 @@ export class DetalhesProdutoComponent implements OnInit {
 
   constructor(
     private route: ActivatedRoute,
-    private produtoService: ProdutoService
+    private produtoService: ProdutoService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -22,6 +23,10 @@ export class DetalhesProdutoComponent implements OnInit {
 
       if (id) {
         this.produto = this.produtoService.getProduto(id);
+      }
+
+      if (!this.produto) {
+        this.router.navigate(['../../nao-encontrado'], { relativeTo: this.route });
       }
     });
   }
