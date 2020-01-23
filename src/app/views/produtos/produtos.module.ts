@@ -6,7 +6,12 @@ import { DetalhesProdutoComponent } from './detalhes-produto/detalhes-produto.co
 import { ProdutoNaoEncontradoComponent } from './produto-nao-encontrado/produto-nao-encontrado.component';
 
 @NgModule({
-  declarations: [ListaProdutosComponent, NovoProdutoComponent, DetalhesProdutoComponent, ProdutoNaoEncontradoComponent],
+  declarations: [
+    ListaProdutosComponent, 
+    NovoProdutoComponent, 
+    DetalhesProdutoComponent, 
+    ProdutoNaoEncontradoComponent
+  ],
   imports: [
     CommonModule
   ]
