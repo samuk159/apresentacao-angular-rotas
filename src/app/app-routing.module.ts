@@ -19,13 +19,8 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
-    path: '',
-    children: [  
-      {
-        path: 'produtos',
-        loadChildren: './views/produtos/produtos.module#ProdutosModule'
-      },
-    ]
+    path: 'produtos',
+    loadChildren: './views/produtos/produtos.module#ProdutosModule'
   }
 ];
 

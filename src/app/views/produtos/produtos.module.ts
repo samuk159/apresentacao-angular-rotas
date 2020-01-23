@@ -1,3 +1,4 @@
+import { ProdutosRoutingModule } from './produtos-routing.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ListaProdutosComponent } from './lista-produtos/lista-produtos.component';
@@ -13,7 +14,8 @@ import { ProdutoNaoEncontradoComponent } from './produto-nao-encontrado/produto-
     ProdutoNaoEncontradoComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    ProdutosRoutingModule
   ]
 })
 export class ProdutosModule { }
