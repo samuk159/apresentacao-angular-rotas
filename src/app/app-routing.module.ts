@@ -1,3 +1,4 @@
+import { AuthGuardService } from './guards/auth-guard/auth-guard.service';
 import { HomeComponent } from './views/home/home.component';
 import { AppComponent } from './app.component';
 import { NgModule } from '@angular/core';
@@ -12,7 +13,8 @@ const routes: Routes = [
   },
   {
     path: 'home',
-    component: HomeComponent
+    component: HomeComponent,
+    canActivate: [AuthGuardService]
   },
   {
     path: 'login',
@@ -20,7 +22,8 @@ const routes: Routes = [
   },
   {
     path: 'produtos',
-    loadChildren: './views/produtos/produtos.module#ProdutosModule'
+    loadChildren: './views/produtos/produtos.module#ProdutosModule',
+    canActivate: [AuthGuardService]
   }
 ];
 
