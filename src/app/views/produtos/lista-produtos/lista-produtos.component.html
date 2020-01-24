@@ -1,5 +1,6 @@
+<div class="m-3"><h3>Produtos</h3></div>
 <div *ngFor="let produto of produtos; let i = index"
-  class="row py-2 mx-0 border mt-3 mx-3" [class.bg-light]="i % 2 == 0">
+  class="row py-2 mx-0 border mx-3" [class.bg-light]="i % 2 == 0">
   <div class="col-1">
     <span class="font-weight-bold">ID:</span> {{produto.id}}
   </div>
