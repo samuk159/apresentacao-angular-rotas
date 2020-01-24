@@ -1,4 +1,3 @@
-import { ProdutosRoutingModule } from './produtos-routing.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ListaProdutosComponent } from './lista-produtos/lista-produtos.component';
@@ -13,8 +12,7 @@ import { ProdutoService } from '../../services/produto/produto.service';
     ProdutoNaoEncontradoComponent
   ],
   imports: [
-    CommonModule,
-    ProdutosRoutingModule
+    CommonModule
   ],
   providers: [
     ProdutoService
